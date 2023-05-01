@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="cripApp" ng-controller="cripCtrl">
+
+<form name="oneWordForm">
+  <label for="ciphertext">Ciphertext:</label>
+  <input type="text" ng-model="ciphertext" required><br>
+  <label for="likeexclusion">Like Exclusion:</label>
+  <input type="checkbox" ng-model="likeexclusion"><br>
+  <button ng-click="solve()" ng-disabled=!ciphertext>Solve</button>
+  <button ng-click="clear()">Clear</button><br>
+</form>
+
+<p>{{plaintext}}</p>
+
+</div>
+
+<script src="cripApp.js"></script>
+<script src="cripCtrl.js"></script>
+<script src="cripDic.js"></script>
+
+</body>
+</html>
